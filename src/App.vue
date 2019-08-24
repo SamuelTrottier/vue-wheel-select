@@ -1,18 +1,41 @@
 <template>
   <div id="app">
+    <h1>
+      Vue Wheel Select
+    </h1>
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <VueWheelSelect
+      v-model="selectedBrand"
+      :options="brandOptions"/>
+    <p>Selected value : {{ selectedBrand }}</p>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue';
+import VueWheelSelect from './components/VueWheelSelect.vue';
 
 export default {
   name: 'app',
   components: {
-    HelloWorld,
+    VueWheelSelect,
   },
+  data() {
+    return {
+      brandOptions: [
+        'Scarpa',
+        'Black Diamond',
+        'La Sportiva',
+        'Tenaya',
+        'Five Ten',
+        'Mad Rock',
+        'Evolv',
+        'Red Chili',
+      ],
+      selectedBrand: 'Black Diamond',
+    };
+  },
+
+
 };
 </script>
 
