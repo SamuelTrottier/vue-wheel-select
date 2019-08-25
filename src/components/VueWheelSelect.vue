@@ -16,8 +16,8 @@
           v-if="allowNullSelection"
           :height="optionHeight"
           :option="null"
-          :selected="option === null"
-          :getOptionLabel="() => noSelectionMessage"
+          :selected="selectedItem === null"
+          :getOptionLabel="() => nullSelectionMessage"
           @click="selectedItem = null"
         />
         <SelectItem
@@ -48,7 +48,7 @@ export default {
 
   props: {
     value: {
-      type: [String, Number],
+      type: [String, Number, Object, null],
       required: true,
     },
     options: {
@@ -67,7 +67,7 @@ export default {
       type: Boolean,
       default: false,
     },
-    noSelectionMessage: {
+    nullSelectionMessage: {
       type: String,
       default: 'Select an option',
     },
