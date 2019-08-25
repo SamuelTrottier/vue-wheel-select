@@ -1,7 +1,9 @@
 {
   "name": "vue-wheel-select",
-  "version": "0.1.0",
-  "private": true,
+  "version": "0.0.1",
+  "description": "A simple select that you scroll through to select items.",
+  "author": "Samuel Trottier",
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
