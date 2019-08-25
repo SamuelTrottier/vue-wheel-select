@@ -6,8 +6,9 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <VueWheelSelect
       v-model="selectedBrand"
-      :options="brandOptions"/>
-    <p>Selected value : {{ selectedBrand }}</p>
+      :options="brandOptions"
+      allow-null-selection/>
+    <p>Selected value : {{ selectedBrand || 'null' }}</p>
   </div>
 </template>
 
