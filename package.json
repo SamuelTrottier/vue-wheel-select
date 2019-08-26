@@ -1,6 +1,6 @@
 {
   "name": "vue-wheel-select",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "A simple select that you scroll through to select items.",
   "author": "Samuel Trottier",
   "license": "MIT",
