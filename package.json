@@ -1,12 +1,20 @@
 {
   "name": "vue-wheel-select",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "A simple select that you scroll through to select items.",
   "author": "Samuel Trottier",
   "license": "MIT",
   "private": false,
+  "keywords": [
+    "vue",
+    "select",
+    "wheel",
+    "selection",
+    "mobile"
+  ],
+  "repository": "https://github.com/SamuelTrottier/vue-wheel-select",
   "files": [
-    "dist/*"
+    "dist"
   ],
   "scripts": {
     "serve": "vue-cli-service serve",
