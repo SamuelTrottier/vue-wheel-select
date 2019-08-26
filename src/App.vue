@@ -6,7 +6,8 @@
     <img alt="Vue logo" src="./assets/logo.png">
     <VueWheelSelect
       v-model="selectedBrand"
-      :options="brandOptions"/>
+      :options="brandOptions"
+      allow-null-selection/>
     <p>Selected value : {{ selectedBrand }}</p>
   </div>
 </template>
@@ -31,7 +32,7 @@ export default {
         'Evolv',
         'Red Chili',
       ],
-      selectedBrand: 'Black Diamond',
+      selectedBrand: null,
     };
   },
 

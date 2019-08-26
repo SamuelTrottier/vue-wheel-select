@@ -58,7 +58,7 @@ The component accepts these props:
 
 | Attribute        | Type                                            | Default              | Description      |
 | :---             | :---:                                           | :---:                | :---             |
-| v-model / value  | String / Number / Object / null | `null`               | Set or Get selected value (required) |
+| v-model / value  | Any              | Set or Get selected value (required) |
 | options           | Array                                          | `null`       | Select options (required)  s|
 | optionHeight           | Number                                    | 48  | Height of a single selectable item |
 | getOptionLabel | Function | Returns the option | Function called to display the label of each options |

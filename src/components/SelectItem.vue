@@ -1,8 +1,8 @@
 <template>
   <div
     :style="{'height': `${height}px`}"
-    :class="{'vws-selected': selected, 'vws-null-option': nullOption}"
-    class="vws--select-item"
+    :class="{'selected': selected, 'null-option': nullOption}"
+    class="select-item"
     @click="$emit('click')"
   >
     {{ getOptionLabel(option) }}
@@ -37,7 +37,7 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.vws--select-item {
+.select-item {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -49,10 +49,10 @@ export default {
     background-color: #f8f8f8;
   }
 
-  &.vws-selected {
+  &.selected {
     background-color: #efefef;
   }
-  &.vws-null-option {
+  &.null-option {
     color: #888;
   }
 

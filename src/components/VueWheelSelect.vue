@@ -4,7 +4,7 @@
     class="vue-wheel-select"
   >
     <div
-      class="vws--scroller"
+      class="scroller"
       ref="scroller"
       @scroll="settleScroll">
       <div
@@ -31,10 +31,10 @@
       </div>
     </div>
     <div
-      class="vws--overlay">
+      class="overlay">
       <div
         :style="{'height': `${optionHeight}px`}"
-        class="vws--center-bounds"/>
+        class="center-bounds"/>
     </div>
   </div>
 </template>
@@ -48,7 +48,7 @@ export default {
 
   props: {
     value: {
-      type: [String, Number, Object, null],
+      type: null,
       required: true,
     },
     options: {
@@ -95,7 +95,7 @@ export default {
     this.padding = (this.wheelHeight - this.optionHeight) / 2;
     this.scrollToValue(this.value);
     this.$nextTick(() => {
-      this.$refs.scroller.classList.add('vws-smooth-scroll');
+      this.$refs.scroller.classList.add('smooth-scroll');
     });
   },
 
@@ -124,9 +124,9 @@ export default {
 
       let idx = (middleScrollPos - (middleScrollPos % this.optionHeight)) / this.optionHeight;
       idx -= this.allowNullSelection ? 1 : 0;
-
-      this.$emit('input', this.options[idx]);
-      this.scrollToValue(this.options[idx]);
+      const newValue = this.options[idx] || null;
+      this.$emit('input', newValue);
+      this.scrollToValue(newValue);
     },
 
     scrollToValue(value) {
@@ -153,7 +153,7 @@ export default {
   border-radius: .25rem;
 
 
-  .vws--scroller {
+  .scroller {
     height: 100%;
     overflow-y: scroll;
 
@@ -166,7 +166,7 @@ export default {
 
   }
 
-  .vws--overlay {
+  .overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -177,7 +177,7 @@ export default {
 
     pointer-events: none;
 
-    .vws--center-bounds {
+    .center-bounds {
       border-bottom: 1px solid #ced4da;
       border-top: 1px solid #ced4da;
       width: 100%;
@@ -186,7 +186,7 @@ export default {
 }
 
 //Adding a smooth scroll effect for when the component recenters the selected item after scroll
-.vws-smooth-scroll {
+.smooth-scroll {
   scroll-behavior: smooth;
 }
 </style>
