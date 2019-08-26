@@ -1,19 +1,27 @@
 {
   "name": "vue-wheel-select",
-  "version": "0.0.2",
+  "version": "0.0.21",
   "description": "A simple select that you scroll through to select items.",
   "author": "Samuel Trottier",
   "license": "MIT",
+  "private": false,
+  "files": [
+    "dist/*"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test:unit": "vue-cli-service test:unit"
+    "test:unit": "vue-cli-service test:unit",
+    "build:npm": "vue-cli-service build --target lib --name vueWheelSelect src/components/VueWheelSelect.vue"
   },
   "dependencies": {
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "vue": "^2.6.10",
+    "vue-template-compiler": "^2.6.10"
   },
+  "main": "dist/vueWheelSelect.umd.js",
+  "unpkg": "dist/vueWheelSelect.umd.min.js",
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
@@ -27,7 +35,6 @@
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "node-sass": "^4.9.0",
-    "sass-loader": "^7.1.0",
-    "vue-template-compiler": "^2.6.10"
+    "sass-loader": "^7.1.0"
   }
 }
