@@ -62,5 +62,6 @@ The component accepts these props:
 | options           | Array                                          | `null`       | Select options (required)  s|
 | optionHeight           | Number                                    | 48  | Height of a single selectable item |
 | getOptionLabel | Function | Returns the option | Function called to display the label of each options |
+| getOptionKey | Function | Returns the option | Function called to set the option key |
 | allowNullSelection | Boolean | false | Add a null option |
 | nullSelectionMessage | String | 'Select an option' | Text to display for the null option |

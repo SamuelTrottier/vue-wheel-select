@@ -22,7 +22,7 @@
         />
         <SelectItem
           v-for="option in options"
-          :key="option"
+          :key="getOptionKey(option)"
           :height="optionHeight"
           :selected="option === selectedItem"
           v-bind="{ getOptionLabel, option }"
@@ -60,6 +60,10 @@ export default {
       default: 48,
     },
     getOptionLabel: {
+      type: Function,
+      default: key => key,
+    },
+    getOptionKey: {
       type: Function,
       default: key => key,
     },
