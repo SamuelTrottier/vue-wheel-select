@@ -1,6 +1,6 @@
 {
   "name": "vue-wheel-select",
-  "version": "0.0.23",
+  "version": "0.0.24",
   "description": "A simple select that you scroll through to select items.",
   "author": "Samuel Trottier",
   "license": "MIT",
@@ -30,6 +30,9 @@
   },
   "main": "dist/vueWheelSelect.umd.js",
   "unpkg": "dist/vueWheelSelect.umd.min.js",
+  "browser": {
+    "./sfc": "src/vueWheelSelect.vue"
+  },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.11.0",
     "@vue/cli-plugin-eslint": "^3.11.0",
