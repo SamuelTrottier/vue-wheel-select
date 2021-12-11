@@ -36,7 +36,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style scoped>
 .select-item {
   display: flex;
   align-items: center;
@@ -45,16 +45,17 @@ export default {
   padding: 0 8px;
 
   transition: background-color 0.5s ease;
-  &:hover:not(.selected) {
-    background-color: #f8f8f8;
-  }
+}
 
-  &.selected {
-    background-color: #efefef;
-  }
-  &.null-option {
-    color: #888;
-  }
+.select-item:hover:not(.selected) {
+  background-color: #f8f8f8;
+}
 
+.select-item.selected {
+  background-color: #efefef;
+}
+
+.select-item.null-option {
+  color: #888;
 }
 </style>

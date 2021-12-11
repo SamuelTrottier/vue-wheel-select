@@ -142,7 +142,7 @@ export default {
   },
 };
 </script>
-<style lang="scss" scoped>
+<style scoped>
 
 .vue-wheel-select {
   position: relative;
@@ -155,41 +155,36 @@ export default {
 
   border: 1px solid #ced4da;
   border-radius: .25rem;
-
-
-  .scroller {
-    height: 100%;
-    overflow-y: scroll;
-
-    // Removing the scrollbars
-    &::-webkit-scrollbar {
-      width: 0 !important;
-    }
-    overflow-y: -moz-scrollbars-none;
-    -ms-overflow-style: none;
-
-  }
-
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-
-    pointer-events: none;
-
-    .center-bounds {
-      border-bottom: 1px solid #ced4da;
-      border-top: 1px solid #ced4da;
-      width: 100%;
-    }
-  }
+}
+.scroller {
+  height: 100%;
+  overflow-y: scroll;
+  overflow-y: -moz-scrollbars-none;
+  -ms-overflow-style: none;
 }
 
-//Adding a smooth scroll effect for when the component recenters the selected item after scroll
+.scroller ::-webkit-scrollbar {
+  width: 0 !important;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+
+  pointer-events: none;
+}
+
+.overlay.center-bounds {
+  border-bottom: 1px solid #ced4da;
+  border-top: 1px solid #ced4da;
+  width: 100%;
+}
+
 .smooth-scroll {
   scroll-behavior: smooth;
 }
